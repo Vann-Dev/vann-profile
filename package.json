@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "generate": "npx prisma generate",
     "build": "next build",
-    "start": "next start",
+    "start": "npm run generate && next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^4.15.0",
     "@types/node": "20.2.5",
     "@types/react": "18.2.7",
     "@types/react-dom": "18.2.4",
@@ -17,9 +19,16 @@
     "eslint-config-next": "13.4.4",
     "next": "13.4.4",
     "postcss": "8.4.24",
+    "prisma": "^4.15.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-particles": "^2.9.3",
     "tailwindcss": "3.3.2",
+    "tsparticles": "^2.9.3",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0"
   }
 }
