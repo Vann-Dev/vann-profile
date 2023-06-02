@@ -1,6 +1,7 @@
 import NavBar from '@/components/navBar'
 import Background from '@/components/background'
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -9,11 +10,11 @@ export default function Home() {
         <title>Home</title>
       </Head>
 
-      <a href='/dashboard/portfolio' className='fixed left-0 flex items-center'>
+      <Link href='/dashboard/portfolio' className='fixed left-0 flex items-center'>
         <div className='w-auto py-1 px-2 bg-white/70 origin-bottom-left rotate-90 rounded-t-xl'>
           <p className='font-monomaniac text-xs lg:text-sm'>Among Us Theme</p>
         </div>
-      </a>
+      </Link>
 
       <main className='flex justify-center items-center h-screen w-full md:px-12 md:py-6 lg:py-10 lg:px-32 px-5 py-5 z-50'>
         <div className='text-white text-center grid gap-6 lg:gap-12'>
