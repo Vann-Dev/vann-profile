@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <Link href='/dashboard/portfolio' className='fixed left-0 flex items-center'>
-        <div className='w-auto py-1 px-2 bg-white/70 origin-bottom-left rotate-90 rounded-t-xl'>
+        <div className='w-auto py-1 px-2 bg-white opacity-70 hover:opacity-100 transition-opacity origin-bottom-left rotate-90 rounded-t-xl'>
           <p className='font-monomaniac text-xs lg:text-sm'>Among Us Theme</p>
         </div>
       </Link>
