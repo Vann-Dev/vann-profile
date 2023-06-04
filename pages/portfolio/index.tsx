@@ -58,6 +58,7 @@ export default function Portfolio() {
                     <div className='bg-white h-[0.5px] my-6 w-full'></div>
                 </div>
                 {/* Content */}
+                <h1 className='font-monomaniac text-white text-2xl lg:text-3xl text-center mb-6'>📽️ CLICK THE VIDEO TO PLAY 📽️</h1>
                 <div className='grid grid-cols-2 md:grid-cols-4 gap-3 lg:grid-cols-6 justify-between'>
                     {
                         data.map((e: any) => (
