@@ -2,20 +2,7 @@ import NavBar from '@/components/navBar'
 import Link from 'next/link'
 import Head from 'next/head'
 import { useState, useEffect } from 'react';
-import Background from '@/components/background';
 import Loading from '@/components/loading';
-
-// https://i.imgur.com/HzqiLZu.mp4
-// https://i.imgur.com/27izbuF.mp4
-// https://i.imgur.com/BDkS7Zx.mp4
-// https://i.imgur.com/VgBGWod.mp4
-// https://i.imgur.com/f6HHtrm.mp4
-// https://i.imgur.com/wvmYEo9.mp4
-// https://i.imgur.com/AyQK6To.mp4
-// https://i.imgur.com/dcU6LPA.mp4
-// https://i.imgur.com/tGJDebR.mp4
-// https://i.imgur.com/x8rGegX.mp4
-// https://i.imgur.com/euwfikL.mp4s
 
 export default function Portfolio() {
 
@@ -41,6 +28,18 @@ export default function Portfolio() {
         )
     }
 
+    function hoverPlay(id: string) {
+        const video = document.getElementById(id)
+        //@ts-ignore
+        video.play()
+    }
+
+    function hoverPause(id: string) {
+        const video = document.getElementById(id)
+        //@ts-ignore
+        video.pause()
+    }
+
     return (
         <div className='bg-black min-h-screen min-w-screen'>
             <Head>
@@ -62,15 +61,17 @@ export default function Portfolio() {
                 <div className='grid grid-cols-2 md:grid-cols-4 gap-3 lg:grid-cols-6 justify-between'>
                     {
                         data.map((e: any) => (
-                            <video
-                                key={e.id} // Assuming each video has a unique identifier
-                                className={`w-full bg-white h-full rounded-xl ${e.expand ? "col-span-2" : ""}`}
-                                loop={true}
-                                autoPlay={true}
-                                muted
-                            >
-                                <source src={e.link} type="video/mp4" />
-                            </video>
+                            <Link onMouseOver={() => hoverPlay(e.id)} onMouseOut={() => hoverPause(e.id)} href={`portfolio/${e.id}`} key={e.id} className={`${e.expand ? "col-span-2" : ""}`}>
+                                <video
+                                    id={e.id}
+                                    className={`w-full bg-white h-full rounded-xl`}
+                                    loop={false}
+                                    autoPlay={false}
+                                    muted
+                                >
+                                    <source src={e.link} type="video/mp4" />
+                                </video>
+                            </Link>
                         ))
                     }
                 </div>

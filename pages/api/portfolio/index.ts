@@ -10,7 +10,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     if (req.method === "POST") {
-        console.log(req.body)
         const data = await post(req)
 
         res.redirect("/dashboard/portfolio")
