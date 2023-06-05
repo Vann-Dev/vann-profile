@@ -24,7 +24,7 @@ export default function Portfolio() {
                         <div className='bg-white h-[0.5px] my-6 w-full'></div>
                     </div>
                     {/* Content */}
-                    <div className='text-white font-monomaniac grid gap-3 md:text-xl'>
+                    <div className='text-white font-oswaid grid gap-3 md:text-xl'>
                         <a className='hover:text-green-700' href='https://wa.me/6285280423005'>Whatsapp: +6285280423005</a>
                         <a className='hover:text-green-700' href='https://github.com/Vann-Dev'>Github: Vann-Dev</a>
                         <a className='hover:text-green-700' href='https://www.linkedin.com/in/stevan-vincent-b7b853246/'>Linkedin: Stevan Vincent</a>
