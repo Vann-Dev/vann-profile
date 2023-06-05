@@ -59,7 +59,7 @@ export default function Portfolio() {
                         className={`w-full bg-white h-full rounded-xl ${data.expand ? "col-span-2" : ""}`}
                         loop={true}
                         autoPlay={true}
-                        muted
+                        controls={true}
                     >
                         <source src={data.link} type="video/mp4" />
                     </video>
