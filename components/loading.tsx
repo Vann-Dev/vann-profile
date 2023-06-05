@@ -30,6 +30,7 @@ export default function Loading() {
             </Head>
             <main className='flex justify-center items-center h-screen w-full md:px-12 md:py-6 lg:py-10 lg:px-32 px-5 py-5 z-50'>
                 <div className='text-white text-center grid gap-6 lg:gap-12 animate-pulse'>
+                    <p className='text-xs font-oswaid opacity-70'>Loading...</p>
                     <h1 className='font-bold text-3xl md:text-4xl lg:text-6xl font-oswaid delay-150 uppercase'>{text}</h1>
                 </div>
             </main>
