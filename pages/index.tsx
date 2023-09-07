@@ -22,7 +22,7 @@ export default function Home() {
             <NavBar />
           </div>
           <h1 className='font-bold text-3xl md:text-4xl lg:text-6xl animate-pulse font-monomaniac delay-150'>STEVAN VINCENT</h1>
-          <p className='text-sm md:text-lg lg:text-2xl font-lato'>Hello my name is <span className='text-white animate-waving-hand'>Stevan 👋</span>, fresh graduate from Animation school named SMK STRADA DAAN MOGOT</p>
+          <p className='text-sm md:text-lg lg:text-2xl font-lato'>Hello my name is <span className='text-white animate-waving-hand'>Stevan 👋</span>, Web Dev & App Dev from Indonesia</p>
         </div>
       </main>
 
