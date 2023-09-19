@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -13,6 +14,7 @@ export default function Document() {
         <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
       </Head>
       <body>
+        <script async data-cfasync="false" type="text/javascript" data-adel="atag" src="//achcdn.com/script/atg.js" czid="arr0c7nqc"></script>
         <Main />
         <NextScript />
       </body>
