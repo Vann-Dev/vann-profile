@@ -6,7 +6,7 @@ import Background from '@/components/background';
 export default function Portfolio() {
 
     return (
-        <div className='bg-black min-h-screen min-w-screen'>
+        <>
             <Head>
                 <title>Contact</title>
             </Head>
@@ -28,11 +28,11 @@ export default function Portfolio() {
                         <a className='hover:text-green-700' href='https://wa.me/6285280423005'>Whatsapp: +6285280423005</a>
                         <a className='hover:text-green-700' href='https://github.com/Vann-Dev'>Github: Vann-Dev</a>
                         <a className='hover:text-green-700' href='https://www.linkedin.com/in/stevan-vincent-b7b853246/'>Linkedin: Stevan Vincent</a>
-                        <a className='hover:text-green-700' href='https://discord.com/users/435497505883422721'>Discord: Vann#0001</a>
+                        <a className='hover:text-green-700' href='https://discord.com/users/435497505883422721'>Discord: vannfrv</a>
                         <a>Email: stevanvincent05@gmail.com</a>
                     </div>
                 </main>
             </Background>
-        </div>
+        </>
     )
 }

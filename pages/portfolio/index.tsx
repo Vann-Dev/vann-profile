@@ -2,46 +2,42 @@ import NavBar from '@/components/navBar'
 import Link from 'next/link'
 import Head from 'next/head'
 import { useState, useEffect } from 'react';
-import Loading from '@/components/loading';
+import Background from '@/components/background';
+import Image from 'next/image';
+
+interface IPortfolioData {
+    id: string;
+    date_created: string;
+    date_updated: string;
+    github_link: string | null;
+    title: string;
+    link: string;
+    description: string;
+    custom_links: {
+        link_name: string;
+        link_url: string;
+    }[] | null;
+}
 
 export default function Portfolio() {
-
-    const [data, setData] = useState() as any
+    const [data, setData] = useState<IPortfolioData[]>()
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('/api/portfolio');
-                const jsonresponse = await response.json()
-                setData(jsonresponse);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
+        const getPortfolio = async () => {
+            fetch("https://dashboard.vannapps.com/items/stevan_portfolios").then(async (res) => {
+                const response = await res.json() as unknown as { data: IPortfolioData[] }
 
-        fetchData();
-    }, []);
+                setData(response.data)
+            }).catch(err => console.log(err))
+        }
 
-    if (!data) {
-        return (
-            <Loading />
-        )
-    }
-
-    function hoverPlay(id: string) {
-        const video = document.getElementById(id)
-        //@ts-ignore
-        video.play()
-    }
-
-    function hoverPause(id: string) {
-        const video = document.getElementById(id)
-        //@ts-ignore
-        video.pause()
-    }
+        if (!data) {
+            getPortfolio()
+        }
+    }, [data])
 
     return (
-        <div className='bg-black min-h-screen min-w-screen'>
+        <Background enable>
             <Head>
                 <title>Portfolio</title>
             </Head>
@@ -54,29 +50,54 @@ export default function Portfolio() {
                 {/* Header */}
                 <div>
                     <h1 className='text-2xl md:text-4xl lg:text-5xl text-white font-oswaid mt-12'>PORTFOLIO</h1>
-                    <p className='text-white/80 font-lato mt-2 text-xs md:text-base lg:text-xl'>Some of the projects I have or have worked on ✨</p>
+                    <p className='text-white/80 font-lato mt-2 text-xs md:text-base lg:text-xl'>Some of the projects I have created, or am working on ✨</p>
                     <div className='bg-white h-[0.5px] my-6 w-full'></div>
                 </div>
                 {/* Content */}
-                <h1 className='font-monomaniac text-white text-2xl lg:text-3xl text-center mb-6'>📽️ CLICK THE VIDEO TO PLAY 📽️</h1>
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-3 lg:grid-cols-6 justify-between'>
+                <div className='grid grid-cols-2 md:grid-cols-4 gap-3 justify-between font-lato'>
                     {
-                        data.map((e: any) => (
-                            <Link onMouseOver={() => hoverPlay(e.id)} onMouseOut={() => hoverPause(e.id)} href={`portfolio/${e.id}`} key={e.id} className={`${e.expand ? "col-span-2" : ""}`}>
-                                <video
-                                    id={e.id}
-                                    className={`w-full bg-white h-full rounded-xl`}
-                                    loop={false}
-                                    autoPlay={false}
-                                    muted
-                                >
-                                    <source src={e.link} type="video/mp4" />
-                                </video>
+                        data?.map((val) => (
+                            <Link href={val.link} key={val.id} className='text-white bg-white/20 p-4 rounded-md flex flex-col justify-between'>
+                                <div>
+                                    <h2 className='font-bold text-sm md:text-lg'>{val.title}</h2>
+                                    <p className='text-xs mt-2 md:text-sm'>{val.description}</p>
+                                </div>
+
+                                <div>
+                                    <div className='flex justify-between w-full items-end mt-6'>
+                                        <div>
+                                            <Link href={val.link}>
+                                                <Image className='w-6 aspect-square hover:scale-125 transition-all' alt='' src={"/icons/link.svg"} height={0} width={0} />
+                                            </Link>
+                                            {
+                                                val.custom_links &&
+                                                <div className='mt-4'>
+                                                    {
+                                                        val.custom_links?.map(link => (
+                                                            <Link key={link.link_name} href={link.link_url}>
+                                                                <p className='text-xs md:text-sm text-blue-600 underline hover:text-green-600 transition-colors'>{link.link_name}</p>
+                                                            </Link>
+                                                        ))
+                                                    }
+                                                </div>
+                                            }
+                                        </div>
+                                        {
+                                            val.github_link
+                                            &&
+                                            <Link href={val.github_link}>
+                                                <Image className='w-5 aspect-square hover:scale-125 transition-all' alt='' src={"/icons/github.svg"} height={0} width={0} />
+                                            </Link>
+                                        }
+                                    </div>
+
+                                </div>
+
                             </Link>
                         ))
                     }
                 </div>
             </main>
-        </div>
+        </Background>
     )
 }

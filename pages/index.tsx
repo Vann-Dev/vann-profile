@@ -1,7 +1,6 @@
 import NavBar from '@/components/navBar'
 import Background from '@/components/background'
 import Head from 'next/head'
-import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -10,11 +9,11 @@ export default function Home() {
         <title>Home</title>
       </Head>
 
-      <Link href='/dashboard/portfolio' className='fixed left-0 flex items-center'>
+      <div className='fixed left-0 flex items-center'>
         <div className='w-auto py-1 px-2 bg-white opacity-70 hover:opacity-100 transition-opacity origin-bottom-left rotate-90 rounded-t-xl'>
           <p className='font-monomaniac text-xs lg:text-sm'>Among Us Theme</p>
         </div>
-      </Link>
+      </div>
 
       <main className='flex justify-center items-center h-screen w-full md:px-12 md:py-6 lg:py-10 lg:px-32 px-5 py-5 z-50'>
         <div className='text-white text-center grid gap-6 lg:gap-12'>
@@ -22,7 +21,7 @@ export default function Home() {
             <NavBar />
           </div>
           <h1 className='font-bold text-3xl md:text-4xl lg:text-6xl animate-pulse font-monomaniac delay-150'>STEVAN VINCENT</h1>
-          <p className='text-sm md:text-lg lg:text-2xl font-lato'>Hello my name is <span className='text-white animate-waving-hand'>Stevan 👋</span>, Web Dev & App Dev from Indonesia</p>
+          <p className='text-sm md:text-lg lg:text-2xl font-lato lg:px-20'>Hello my name is <span className='text-white animate-waving-hand'>Stevan 👋</span>, Web Developer & App Developer since 2020, Experience on JavaScript, TypeScript, NodeJS, React, NextJS</p>
         </div>
       </main>
 
