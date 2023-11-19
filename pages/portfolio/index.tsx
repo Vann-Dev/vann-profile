@@ -54,10 +54,10 @@ export default function Portfolio() {
                     <div className='bg-white h-[0.5px] my-6 w-full'></div>
                 </div>
                 {/* Content */}
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-3 justify-between font-lato'>
+                <div className='columns-2 md:columns-4 gap-2 justify-between font-lato'>
                     {
                         data?.map((val) => (
-                            <Link href={val.link} key={val.id} className='text-white bg-white/20 p-4 rounded-md flex flex-col justify-between'>
+                            <Link href={val.link} key={val.id} className='text-white bg-white/20 p-4 rounded-md break-inside-avoid-column flex flex-col justify-between h-full mb-2'>
                                 <div>
                                     <h2 className='font-bold text-sm md:text-lg'>{val.title}</h2>
                                     <p className='text-xs mt-2 md:text-sm'>{val.description}</p>
@@ -92,7 +92,6 @@ export default function Portfolio() {
                                     </div>
 
                                 </div>
-
                             </Link>
                         ))
                     }
