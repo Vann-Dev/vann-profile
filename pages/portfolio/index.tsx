@@ -50,14 +50,14 @@ export default function Portfolio() {
                 {/* Header */}
                 <div>
                     <h1 className='text-2xl md:text-4xl lg:text-5xl text-white font-oswaid mt-12'>PORTFOLIO</h1>
-                    <p className='text-white/80 font-lato mt-2 text-xs md:text-base lg:text-xl'>Some of the projects I have created, or am working on ✨</p>
+                    <p className='text-white/80 font-lato mt-2 text-xs md:text-base lg:text-xl'>Some of the projects I have created, or am working on <span className='animate-bounce inline-block'>✨</span></p>
                     <div className='bg-white h-[0.5px] my-6 w-full'></div>
                 </div>
                 {/* Content */}
-                <div className='columns-2 md:columns-4 gap-2 justify-between font-lato'>
+                <div className='columns-2 md:columns-4 gap-3 justify-between font-lato'>
                     {
                         data?.map((val) => (
-                            <Link href={val.link} key={val.id} className='text-white bg-white/20 p-4 rounded-md break-inside-avoid-column flex flex-col justify-between h-full mb-2'>
+                            <Link href={val.link} key={val.id} className='text-white transition-colors duration-300 hover:border-green-600 border-4 border-transparent bg-white/20 p-4 rounded-md break-inside-avoid-column flex flex-col justify-between h-full mb-3'>
                                 <div>
                                     <h2 className='font-bold text-sm md:text-lg'>{val.title}</h2>
                                     <p className='text-xs mt-2 md:text-sm'>{val.description}</p>

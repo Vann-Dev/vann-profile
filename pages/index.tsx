@@ -20,8 +20,10 @@ export default function Home() {
           <div className='flex justify-center text-xs md:text-lg lg:text-2xl w-full text-white'>
             <NavBar />
           </div>
-          <h1 className='font-bold text-3xl md:text-4xl lg:text-6xl animate-pulse font-monomaniac delay-150'>STEVAN VINCENT</h1>
-          <p className='text-sm md:text-lg lg:text-2xl font-lato lg:px-20'>Hello my name is <span className='text-white animate-waving-hand'>Stevan 👋</span>, Web Developer & App Developer since 2020, Experience on JavaScript, TypeScript, NodeJS, React, NextJS</p>
+          <h1 className='font-bold text-3xl md:text-4xl lg:text-6xl animate-pulse font-monomaniac delay-150'>HELLO, WELCOME</h1>
+          <p className='text-sm md:text-lg lg:text-2xl font-lato lg:px-20'>Hello my name is <span className='text-white animate-waving-hand'>Stevan
+            <span className='transition-all animate-waving-hand inline-block origin-bottom-right'>👋</span>
+          </span>, Web Developer & App Developer since 2020, Experience on JavaScript, TypeScript, NodeJS, React, NextJS, HTML, CSS, TailwindCss</p>
         </div>
       </main>
 
