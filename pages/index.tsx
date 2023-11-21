@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </main>
 
-      <a href='https://drive.google.com/file/d/1CQwABYKvjRskby51Ubuc4quZ5nMC6CKj/view?usp=sharing' target='_blank' className='fixed cursor-pointer transition-all font-oswaid outline outline-3 text-white hover:text-green-600 px-7 py-2 rounded-lg opacity-70 right-1 bottom-1 uppercase text-xs md:text-base lg:text-lg'>See my resume Here</a>
+      <a href='https://content.vannapps.com/public/CV-VANN-DEV.pdf' target='_blank' className='fixed cursor-pointer transition-all font-oswaid outline outline-3 text-white hover:text-green-600 px-7 py-2 rounded-lg opacity-70 right-1 bottom-1 uppercase text-xs md:text-base lg:text-lg'>See my resume Here</a>
     </Background>
   )
 }
