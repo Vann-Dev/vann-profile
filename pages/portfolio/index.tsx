@@ -39,7 +39,7 @@ export default function Portfolio() {
     return (
         <Background enable>
             <Head>
-                <title>Portfolio</title>
+                <title>Portfolio - Vann-Dev</title>
             </Head>
             <main className='md:px-12 md:py-6 lg:py-10 lg:px-32 px-5 py-5'>
                 {/* Navbar */}

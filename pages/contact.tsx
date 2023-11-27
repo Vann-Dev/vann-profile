@@ -8,7 +8,7 @@ export default function Portfolio() {
     return (
         <>
             <Head>
-                <title>Contact</title>
+                <title>Contact Information - Vann-Dev</title>
             </Head>
             <Background enable>
                 <main className='md:px-12 md:py-6 lg:py-10 lg:px-32 px-5 py-5'>
@@ -20,7 +20,7 @@ export default function Portfolio() {
                     {/* Header */}
                     <div>
                         <h1 className='text-2xl md:text-4xl lg:text-5xl text-white font-oswaid mt-12'>CONTACT</h1>
-                        <p className='text-white/80 font-lato mt-2 text-xs md:text-base lg:text-xl'>here is my contact information, feel free to reach me 👋</p>
+                        <p className='text-white/80 font-lato mt-2 text-xs md:text-base lg:text-xl'>here is my contact information, feel free to reach me <span className='animate-waving-hand inline-block origin-bottom-right'>👋</span></p>
                         <div className='bg-white h-[0.5px] my-6 w-full'></div>
                     </div>
                     {/* Content */}

@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Background enable>
       <Head>
-        <title>Home</title>
+        <title>Home - Vann-Dev</title>
       </Head>
 
       <div className='fixed left-0 flex items-center'>
