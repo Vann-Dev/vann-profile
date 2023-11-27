@@ -29,7 +29,7 @@ export default function Portfolio() {
                         <a className='hover:text-green-700' href='https://github.com/Vann-Dev'>Github: Vann-Dev</a>
                         <a className='hover:text-green-700' href='https://www.linkedin.com/in/stevan-vincent-b7b853246/'>Linkedin: Stevan Vincent</a>
                         <a className='hover:text-green-700' href='https://discord.com/users/435497505883422721'>Discord: vannfrv</a>
-                        <a>Email: stevanvincent05@gmail.com</a>
+                        <a className='hover:text-green-700' href='mailto:me@vann.my.id'>Email: me@vann.my.id</a>
                     </div>
                 </main>
             </Background>
